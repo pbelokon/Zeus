@@ -13,7 +13,7 @@ const mesh = new Three.Mesh(geometry, material);
 
 
 scene.add(mesh); 
-
+console.log(geometry.id)
 
 // Camera 
 const size ={ 
