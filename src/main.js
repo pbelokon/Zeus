@@ -1,36 +1,79 @@
-import * as Three from "three"
+import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
-const canvas  = document.querySelector("canvas.webgl");
+/**
+ * Base
+ */
+// Canvas
+const canvas = document.querySelector("canvas.webgl");
 
+// Sizes
+const sizes = {
+  width: 800,
+  height: 600,
+};
+
+// Cursor
+const cursor = {
+  x: 0,
+  y: 0,
+};
+
+window.addEventListener("mousemove", (event) => {
+  cursor.x = event.clientX / sizes.width - 0.5;
+  cursor.y = -(event.clientY / sizes.height - 0.5);
+});
 
 // Scene
-const scene = new Three.Scene(); 
+const scene = new THREE.Scene();
 
-// Object 
-const geometry= new Three.BoxGeometry(1,1,1); 
-const material = new Three.MeshBasicMaterial({color:'green'}); 
-const mesh = new Three.Mesh(geometry, material); 
+// Object
+const mesh = new THREE.Mesh(
+  new THREE.BoxGeometry(1, 1, 1, 5, 5, 5),
+  new THREE.MeshBasicMaterial({ color: 0xff0000 }),
+);
+scene.add(mesh);
 
+// Camera
+const camera = new THREE.PerspectiveCamera(
+  75,
+  sizes.width / sizes.height,
+  0.1,
+  100,
+);
+// const aspectRatio = sizes.width / sizes.height
+// const camera = new THREE.OrthographicCamera(- 1 * aspectRatio, 1 * aspectRatio, 1, - 1, 0.1, 100)
+camera.position.z = 3;
+scene.add(camera);
 
-scene.add(mesh); 
-console.log(geometry.id)
+// Controls
+const controls = new OrbitControls(camera, canvas);
+controls.enableDamping = true;
 
-// Camera 
-const size ={ 
-  width: 800, 
-  height: 600,
-}
+// Axes Helper
+const axesHelper = new THREE.AxesHelper(5);
+scene.add(axesHelper);
 
-const camera = new Three.PerspectiveCamera(75, size.width / size.height)
-camera.position.z = 3
-scene.add(camera)
+// Renderer
+const renderer = new THREE.WebGLRenderer({
+  canvas: canvas,
+});
+renderer.setSize(sizes.width, sizes.height);
 
+// Animate
+const clock = new THREE.Clock();
 
-// Renderer 
-const renderer = new Three.WebGLRenderer({
-  canvas: canvas
-})
+const tick = () => {
+  const elapsedTime = clock.getElapsedTime();
 
+  // Update controls
+  controls.update();
 
-renderer.setSize(size.width, size.height)
-renderer.render(scene, camera )
+  // Render
+  renderer.render(scene, camera);
+
+  // Call tick again on the next frame
+  window.requestAnimationFrame(tick);
+};
+
+tick();
