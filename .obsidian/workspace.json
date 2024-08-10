@@ -1,0 +1,160 @@
+{
+  "main": {
+    "id": "545edfbac9a6ee95",
+    "type": "split",
+    "children": [
+      {
+        "id": "51942e6721a49da3",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4da274b1b159c918",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "Obsidian/Zuse.canvas",
+                "viewState": {
+                  "x": -1030,
+                  "y": -250,
+                  "zoom": 0
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8a137679474875d8",
+    "type": "split",
+    "children": [
+      {
+        "id": "ab15d183edd2de6a",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9c8d61e759b9aa2b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0e1d638006fcb237",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2f786b3ad3d4f330",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "244078035d32d1bc",
+    "type": "split",
+    "children": [
+      {
+        "id": "d49950482d33bbf5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e4548c51a18cc44f",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Obsidian/ECS (Entity - Component System).md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "91ddb7eb74db6744",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Obsidian/ECS (Entity - Component System).md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "60adc2b93917db14",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "88cdb4725d6b0799",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Obsidian/ECS (Entity - Component System).md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "4da274b1b159c918",
+  "lastOpenFiles": [
+    "src/scripts/scripts.js",
+    "src/scripts",
+    "Obsidian/ECS (Entity - Component System).md",
+    "Obsidian/Zuse.canvas",
+    "Untitled.md"
+  ]
+}

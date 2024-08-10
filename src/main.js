@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-
+import Entity from "./ECS/Entity";
+import { loadComponent } from "./scripts/scripts";
 /**
  * Base
  */
@@ -58,7 +59,24 @@ scene.add(axesHelper);
 const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
 });
+
+//  Entity example
+const example = new Entity(1, {});
+
+const mesh2 = new THREE.Mesh(
+  new THREE.BoxGeometry(1, 1, 1, 5, 5, 5),
+  new THREE.MeshBasicMaterial({ color: "green" }),
+);
+
+mesh2.name = "Box Geometry";
+
+example.addComponent(mesh2);
+scene.add(example.components[0]);
+example.components[0].position.x = 2;
 renderer.setSize(sizes.width, sizes.height);
+console.log(example.components[0]);
+
+loadComponent(example.components[0]);
 
 // Animate
 const clock = new THREE.Clock();

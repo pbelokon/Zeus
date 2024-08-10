@@ -1,11 +1,19 @@
-// https://threejs.org/docs/#api/en/core/Object3D
-import { Object3D } from "three";
+/*
+  Entity: Consists of unique id and components array, acts as a box for components 
+*/
 
-class Entity extends Object3D {
-  constructor() {
-    // call the constructor of the Object3D
-    super();
+class Entity {
+  constructor(id) {
+    this._id = id;
+    this.components = [];
+  }
+
+  addComponent(component) {
+    this.components.push(component);
+  }
+
+  get id() {
+    return this._id;
   }
 }
-
-export { Entity };
+export default Entity;
