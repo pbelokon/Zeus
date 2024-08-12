@@ -2,6 +2,8 @@ import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import Entity from "./ECS/Entity";
 import { loadComponent } from "./scripts/scripts";
+import { addCube } from "./scripts/objectsScripts";
+
 /**
  * Base
  */
@@ -74,12 +76,16 @@ example.addComponent(mesh2);
 scene.add(example.components[0]);
 example.components[0].position.x = 2;
 renderer.setSize(sizes.width, sizes.height);
-console.log(example.components[0]);
 
 loadComponent(example.components[0]);
 
+// Spawn Object
+const spawn = document.querySelector("#spawn");
+spawn.addEventListener("click", () => {
+  addCube(scene);
+});
 // Animate
-const clock = new THREE.Clock();
+const clock = new THREE.Clock(scene);
 
 const tick = () => {
   const elapsedTime = clock.getElapsedTime();

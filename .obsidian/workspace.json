@@ -15,8 +15,8 @@
               "state": {
                 "file": "Obsidian/Zuse.canvas",
                 "viewState": {
-                  "x": -1030,
-                  "y": -250,
+                  "x": -1532,
+                  "y": -460,
                   "zoom": 0
                 }
               }
@@ -88,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian/ECS (Entity - Component System).md",
+                "file": "Obsidian/Zuse.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Obsidian/ECS (Entity - Component System).md",
+                "file": "Obsidian/Zuse.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Obsidian/ECS (Entity - Component System).md"
+                "file": "Obsidian/Zuse.canvas"
               }
             }
           }
@@ -151,10 +151,10 @@
   },
   "active": "4da274b1b159c918",
   "lastOpenFiles": [
+    "Obsidian/Zuse.canvas",
     "src/scripts/scripts.js",
     "src/scripts",
     "Obsidian/ECS (Entity - Component System).md",
-    "Obsidian/Zuse.canvas",
     "Untitled.md"
   ]
 }

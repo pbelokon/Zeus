@@ -14,3 +14,7 @@ aside {
   color: white;
   padding-right: 2rem;
 }
+
+#spawn {
+  cursor: pointer;
+}
