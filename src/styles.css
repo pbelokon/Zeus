@@ -3,6 +3,7 @@
   top: 0;
   left: 0;
   outline: none;
+  z-index: 0;
 }
 
 main {
@@ -12,9 +13,28 @@ main {
 aside {
   background-color: gray;
   color: white;
-  padding-right: 2rem;
+  height: 200px;
 }
 
 #spawn {
   cursor: pointer;
+}
+
+.entity {
+  color: white;
+  background-color: gray;
+}
+
+.entity,
+aside {
+  margin: 0 4rem;
+  width: 200px;
+}
+
+.container {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
