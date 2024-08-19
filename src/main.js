@@ -54,8 +54,8 @@ const controls = new OrbitControls(camera, canvas);
 controls.enableDamping = true;
 
 // Axes Helper
-const axesHelper = new THREE.AxesHelper(5);
-scene.add(axesHelper);
+// const axesHelper = new THREE.AxesHelper(5);
+// scene.add(axesHelper);
 
 // Renderer
 const renderer = new THREE.WebGLRenderer({
@@ -71,7 +71,7 @@ const mesh2 = new THREE.Mesh(
 );
 
 mesh2.name = "Box Geometry";
-
+console.log(mesh2.name);
 example.addComponent(mesh2);
 scene.add(example.components[0]);
 example.components[0].position.x = 2;
@@ -84,6 +84,28 @@ const spawn = document.querySelector("#spawn");
 spawn.addEventListener("click", () => {
   addCube(scene);
 });
+
+// Selector
+const raycaster = new THREE.Raycaster();
+const pointer = new THREE.Vector2();
+
+document.addEventListener("mousedown", (event) => {
+  pointer.x = (event.clientX / window.innerWidth) * 2 - 1;
+  pointer.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+  raycaster.setFromCamera(pointer, camera);
+
+  const intersections = raycaster.intersectObjects(scene.children, true);
+
+  if (intersections.length > 0) {
+    const selectedObject = intersections[0].object;
+    const color = new THREE.Color(Math.random(), Math.random(), Math.random());
+    selectedObject.material.color = color;
+    console.log("Selected Object:", selectedObject);
+    console.log("Object Name:", selectedObject.name);
+  }
+});
+
 // Animate
 const clock = new THREE.Clock(scene);
 

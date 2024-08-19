@@ -15,8 +15,8 @@
               "state": {
                 "file": "Obsidian/Zuse.canvas",
                 "viewState": {
-                  "x": -1532,
-                  "y": -460,
+                  "x": -1570,
+                  "y": -470,
                   "zoom": 0
                 }
               }
@@ -151,10 +151,10 @@
   },
   "active": "4da274b1b159c918",
   "lastOpenFiles": [
+    "Obsidian/ECS (Entity - Component System).md",
     "Obsidian/Zuse.canvas",
     "src/scripts/scripts.js",
     "src/scripts",
-    "Obsidian/ECS (Entity - Component System).md",
     "Untitled.md"
   ]
 }
