@@ -4,9 +4,8 @@ import Entity from "./ECS/Entity";
 import { loadComponent } from "./scripts/scripts";
 import { addCube } from "./scripts/objectsScripts";
 
-/**
- * Base
- */
+//############[Base]############
+
 // Canvas
 const canvas = document.querySelector("canvas.webgl");
 
@@ -21,12 +20,6 @@ const cursor = {
   x: 0,
   y: 0,
 };
-
-window.addEventListener("mousemove", (event) => {
-  cursor.x = event.clientX / sizes.width - 0.5;
-  cursor.y = -(event.clientY / sizes.height - 0.5);
-});
-
 // Scene
 const scene = new THREE.Scene();
 
@@ -44,8 +37,7 @@ const camera = new THREE.PerspectiveCamera(
   0.1,
   100,
 );
-// const aspectRatio = sizes.width / sizes.height
-// const camera = new THREE.OrthographicCamera(- 1 * aspectRatio, 1 * aspectRatio, 1, - 1, 0.1, 100)
+
 camera.position.z = 3;
 scene.add(camera);
 
@@ -62,7 +54,7 @@ const renderer = new THREE.WebGLRenderer({
   canvas: canvas,
 });
 
-//  Entity example
+//############[Entity example]############
 const example = new Entity(1, {});
 
 const mesh2 = new THREE.Mesh(
@@ -85,7 +77,8 @@ spawn.addEventListener("click", () => {
   addCube(scene);
 });
 
-// Selector
+//############[Selector]############
+
 const raycaster = new THREE.Raycaster();
 const pointer = new THREE.Vector2();
 
@@ -106,7 +99,8 @@ document.addEventListener("mousedown", (event) => {
   }
 });
 
-// Animate
+//############[Animate]############
+
 const clock = new THREE.Clock(scene);
 
 const tick = () => {
