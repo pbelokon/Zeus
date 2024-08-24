@@ -7,4 +7,8 @@ function loadComponent(component) {
   components.appendChild(listElement);
 }
 
-export { loadComponent };
+function deleteComponent(object, scene) {
+  scene.remove(object);
+}
+
+export { loadComponent, deleteComponent };

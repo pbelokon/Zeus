@@ -15,11 +15,6 @@ const sizes = {
   height: window.innerHeight,
 };
 
-// Cursor
-const cursor = {
-  x: 0,
-  y: 0,
-};
 // Scene
 const scene = new THREE.Scene();
 
@@ -98,6 +93,8 @@ document.addEventListener("mousedown", (event) => {
     console.log("Object Name:", selectedObject.name);
   }
 });
+
+//############[Delete]############
 
 //############[Animate]############
 
