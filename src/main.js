@@ -94,6 +94,15 @@ document.addEventListener("mousedown", (event) => {
   }
 });
 
+// Context Menu
+window.addEventListener("contextmenu", function (event) {
+  event.preventDefault();
+  const contextmenu = document.getElementById("context-menu");
+  contextmenu.style.top = event.offsetY + "px";
+  contextmenu.style.left = event.offsetX + "px";
+  contextmenu.classList.add("active");
+});
+
 //############[Delete]############
 
 //############[Animate]############
