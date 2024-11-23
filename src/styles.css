@@ -1,65 +1,36 @@
-.webgl {
-  position: relative;
-  top: 0;
-  left: 0;
-  outline: none;
-  z-index: 0;
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.canvas {
+  border: 1px solid black;
+  margin: 2px;
+  width: calc(100vw - 6px);
+  height: calc(100vh - 6px);
 }
 
 main {
   display: flex;
-}
-
-aside {
-  background-color: gray;
-  color: white;
-  height: 200px;
-}
-
-#spawn {
-  cursor: pointer;
-}
-
-.entity {
-  color: white;
-  background-color: gray;
-}
-
-.entity,
-aside {
-  margin: 0 4rem;
-  width: 200px;
-}
-
-.container {
-  position: absolute;
-  z-index: 10;
-  display: flex;
-  width: 100%;
   justify-content: space-between;
+  background-color: lightgray;
+}
+.body {
+  top: 0;
+  background-color: red;
 }
 
-/* Context Menu */
-#context-menu {
-  position: fixed;
-  width: 150px;
-  background-color: gray;
-  z-index: 100000;
-  transform: scale(0);
-  transform-origin: top left;
+.navigation_elements {
+  display: flex;
+  color: black;
+  padding: 0;
 }
 
-.active {
-  transform: scale(1);
-  transition: transform 200ms ease-in-out;
+.navigation_elements ul {
+  width: 100px;
+  margin: 2rem;
 }
-
-#context-menu .item {
-  padding: 8px 10px;
-  font-size: 15px;
-  color: aliceblue;
-}
-
-#context-menu .item:hover {
-  background-color: lightslategray;
+.object_menu {
+  padding: 0;
 }
